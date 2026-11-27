@@ -87,7 +87,9 @@
     "linked_google": "Đã vào bằng Gmail",
     "linked_login": "Đã có mật khẩu",
     "last_admin": "Band phải còn ít nhất 1 Admin.",
-    "back": "← Hồ sơ"
+    "back": "← Hồ sơ",
+    "tab_members": "Thành viên",
+    "tab_data": "Dữ liệu"
   },
   "data": {
     "title": "Quản trị · Dữ liệu",

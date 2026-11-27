@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { supabase } from '../supabase'
 import { useAuth } from '../auth'
+import AdminTabs from './AdminTabs'
 import { SKILLS } from '../i18n'
 
 const empty = { nickname: '', full_name: '', email: '', username: '', role: 'member', main_skill: '' }
@@ -74,6 +75,7 @@ export default function AdminMembers() {
     <section>
       <Link to="/profile" className="backlink">{t('admin.back')}</Link>
       <h1>{t('admin.title')}</h1>
+      <AdminTabs />
 
       {msg && <p className="note">{msg}</p>}
 

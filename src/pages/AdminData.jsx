@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { supabase } from '../supabase'
 import { useAuth } from '../auth'
+import AdminTabs from './AdminTabs'
 
 // Bang xuat Excel / sao luu (US-04, N4). Them bang moi o cac lat sau vao day.
 export const EXPORT_TABLES = ['bands', 'members', 'songs', 'song_versions', 'audit_log']
@@ -104,6 +105,7 @@ export default function AdminData() {
     <section>
       <Link to="/profile" className="backlink">{t('admin.back')}</Link>
       <h1>{t('data.title')}</h1>
+      <AdminTabs />
       {msg && <p className="note" role="status">{msg}</p>}
 
       <div className="card stack">

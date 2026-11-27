@@ -87,7 +87,9 @@
     "linked_google": "Signed in with Gmail",
     "linked_login": "Has password",
     "last_admin": "The band must keep at least 1 Admin.",
-    "back": "← Profile"
+    "back": "← Profile",
+    "tab_members": "Members",
+    "tab_data": "Data"
   },
   "data": {
     "title": "Admin · Data",
