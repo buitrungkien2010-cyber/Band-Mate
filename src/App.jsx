@@ -5,6 +5,7 @@ import Login from './pages/Login'
 import Home from './pages/Home'
 import Profile from './pages/Profile'
 import AdminMembers from './pages/AdminMembers'
+import AdminData from './pages/AdminData'
 import Placeholder from './pages/Placeholder'
 
 const P = { fill: 'none', stroke: 'currentColor', strokeWidth: 1.8, strokeLinecap: 'round', strokeLinejoin: 'round' }
@@ -42,6 +43,7 @@ export default function App() {
           <Route path="/songs" element={<Placeholder titleKey="nav.songs" slice="SL-03" />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/admin/members" element={isAdmin ? <AdminMembers /> : <Navigate to="/" />} />
+          <Route path="/admin/data" element={isAdmin ? <AdminData /> : <Navigate to="/" />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </main>

@@ -88,5 +88,29 @@
     "linked_login": "Has password",
     "last_admin": "The band must keep at least 1 Admin.",
     "back": "← Profile"
+  },
+  "data": {
+    "title": "Admin · Data",
+    "import_title": "Import Master file",
+    "import_hint": "Download the Master file as .xlsx (Google Sheets → File → Download → Excel), then choose it. The app reads the Songlist sheet and checks the whole file before saving.",
+    "choose_file": "Choose .xlsx file",
+    "no_sheet": "No \"Songlist\" sheet found in the file.",
+    "has_errors": "{{file}}: {{n}} errors. Nothing saved — fix the Master file and choose it again.",
+    "row": "Row {{row}}",
+    "preview": "{{songs}} songs · {{versions}} versions · {{estimated}} with estimated duration (0:04:32) · {{no_duration}} with no duration",
+    "new_members": "New members (no password yet)",
+    "confirm": "Import into app",
+    "import_done": "Imported {{songs}} songs, {{versions}} versions, {{members}} new members.",
+    "already": "The song library already has data; not importing again.",
+    "already_count": "Already imported: {{n}} songs in the library. The Master file is imported once.",
+    "export_title": "Export to Excel",
+    "export_hint": "Download all data, one sheet per table. Download it monthly to keep a copy.",
+    "last_export": "Last download on this device: {{d}}.",
+    "export": "Download Excel file",
+    "export_done": "Excel file created.",
+    "backup_title": "Automatic backup",
+    "backup_hint": "Every Sunday 23:00 the app backs up automatically and keeps the 4 latest copies.",
+    "no_backup": "No backups yet.",
+    "download": "Download"
   }
 }

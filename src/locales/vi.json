@@ -88,5 +88,29 @@
     "linked_login": "Đã có mật khẩu",
     "last_admin": "Band phải còn ít nhất 1 Admin.",
     "back": "← Hồ sơ"
+  },
+  "data": {
+    "title": "Quản trị · Dữ liệu",
+    "import_title": "Nhập Master file",
+    "import_hint": "Tải Master file về dạng .xlsx (Google Sheets → Tệp → Tải xuống → Excel), rồi chọn file. App đọc sheet Songlist, kiểm tra cả file trước khi ghi.",
+    "choose_file": "Chọn file .xlsx",
+    "no_sheet": "Không thấy sheet \"Songlist\" trong file.",
+    "has_errors": "{{file}}: {{n}} lỗi. Chưa ghi dòng nào — sửa trong Master file rồi chọn lại.",
+    "row": "Dòng {{row}}",
+    "preview": "{{songs}} bài · {{versions}} version · {{estimated}} version thời lượng ước tính (0:04:32) · {{no_duration}} version chưa có thời lượng",
+    "new_members": "Thành viên mới (chưa có mật khẩu)",
+    "confirm": "Nhập vào app",
+    "import_done": "Đã nhập {{songs}} bài, {{versions}} version, {{members}} thành viên mới.",
+    "already": "Kho bài đã có dữ liệu, không nhập lại.",
+    "already_count": "Đã nhập xong: kho bài có {{n}} bài. Master file chỉ nhập 1 lần.",
+    "export_title": "Xuất Excel",
+    "export_hint": "Tải toàn bộ dữ liệu, mỗi bảng 1 sheet. Nên tải về máy mỗi tháng.",
+    "last_export": "Lần tải gần nhất trên máy này: {{d}}.",
+    "export": "Tải file Excel",
+    "export_done": "Đã tạo file Excel.",
+    "backup_title": "Sao lưu tự động",
+    "backup_hint": "Mỗi Chủ nhật 23:00 app tự sao lưu, giữ 4 bản gần nhất.",
+    "no_backup": "Chưa có bản sao lưu nào.",
+    "download": "Tải"
   }
 }
