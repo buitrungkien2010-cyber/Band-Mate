@@ -197,7 +197,13 @@
     "admin_assigns": "Admin assigns",
     "add": "Add",
     "need_fields": "Pick song, part and type a comment.",
-    "scroll_hint": "← swipe to see all columns →"
+    "scroll_hint": "← swipe to see all columns →",
+    "filter": "Filter comments",
+    "all": "All",
+    "group_by": "Group by",
+    "no_group": "No grouping",
+    "clear_filter": "Clear filters",
+    "no_match": "No comments match the filters."
   },
   "pos": {
     "vocal": "Vocal",
