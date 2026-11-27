@@ -5,7 +5,7 @@ export default function Placeholder({ titleKey, slice }) {
   return (
     <section>
       <h1>{t(titleKey)}</h1>
-      <p className="muted">{t('app.coming', { slice })}</p>
+      <p className="card muted small">{t('app.coming', { slice })}</p>
     </section>
   )
 }

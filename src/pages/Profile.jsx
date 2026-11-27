@@ -43,6 +43,7 @@ export default function Profile() {
       </p>
 
       <form onSubmit={submit} className="stack card">
+        <h2 className="card-title">{t('profile.info')}</h2>
         <label>{t('profile.nickname')}
           <input value={form.nickname} onChange={(e) => setForm({ ...form, nickname: e.target.value })} required />
         </label>

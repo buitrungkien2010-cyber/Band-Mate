@@ -72,7 +72,7 @@ export default function AdminMembers() {
 
   return (
     <section>
-      <Link to="/profile" className="muted small">{t('admin.back')}</Link>
+      <Link to="/profile" className="backlink">{t('admin.back')}</Link>
       <h1>{t('admin.title')}</h1>
 
       {msg && <p className="note">{msg}</p>}

@@ -1,10 +1,25 @@
 {
-  "app": { "name": "Band Mate", "loading": "Đang tải…", "save": "Lưu", "saved": "Đã lưu", "cancel": "Hủy", "error": "Có lỗi: {{msg}}", "coming": "Sắp có ở lát {{slice}}" },
-  "nav": { "home": "Trang chủ", "rehearsals": "Buổi tập", "tasks": "Việc", "songs": "Kho bài", "profile": "Hồ sơ" },
+  "app": {
+    "name": "Band Mate",
+    "loading": "Đang tải…",
+    "save": "Lưu",
+    "saved": "Đã lưu",
+    "cancel": "Hủy",
+    "error": "Có lỗi: {{msg}}",
+    "coming": "Sắp có ở lát {{slice}}"
+  },
+  "nav": {
+    "home": "Trang chủ",
+    "rehearsals": "Buổi tập",
+    "tasks": "Việc",
+    "songs": "Kho bài",
+    "profile": "Hồ sơ",
+    "main": "Điều hướng chính"
+  },
   "login": {
     "title": "Đăng nhập",
     "google": "Đăng nhập bằng Google",
-    "or": "hoặc",
+    "or": "hoặc dùng tài khoản band cấp",
     "username": "Username",
     "password": "Mật khẩu",
     "submit": "Đăng nhập",
@@ -15,9 +30,21 @@
     "email_placeholder": "Gmail của bạn",
     "email_send": "Gửi link",
     "email_sent": "Đã gửi. Mở Gmail và bấm link.",
-    "forgot": "Quên mật khẩu? Nhờ Admin đặt lại."
+    "forgot": "Quên mật khẩu? Nhờ Admin đặt lại.",
+    "heading": "Đăng nhập Band Mate",
+    "sub": "Dùng Gmail hoặc username band leader đã cấp.",
+    "tagline": "Kho bài, lịch tập, show và thiết bị của cả band ở một chỗ.",
+    "username_ph": "VD: duong",
+    "show": "Hiện",
+    "hide": "Ẩn",
+    "help_noacc": "Chưa có tài khoản: nhờ band leader thêm bạn ở mục Thành viên.",
+    "help_zalo": "Mở link từ Zalo mà không đăng nhập Google được: chọn \"Mở bằng trình duyệt\" (Chrome hoặc Safari)."
   },
-  "home": { "hello": "Chào {{name}}!", "intro": "Buổi tập và Việc của tôi sẽ hiện ở đây (lát SL-04)." },
+  "home": {
+    "hello": "Chào {{name}}!",
+    "intro": "Buổi tập và Việc của tôi sẽ hiện ở đây (lát SL-04).",
+    "next_title": "Buổi tập tới"
+  },
   "profile": {
     "title": "Hồ sơ",
     "nickname": "Tên gọi",
@@ -28,9 +55,18 @@
     "admin": "Quản trị",
     "logout": "Đăng xuất",
     "role_admin": "Admin",
-    "role_member": "Thành viên"
+    "role_member": "Thành viên",
+    "info": "Thông tin"
   },
-  "skills": { "vocal": "Vocal", "drum": "Drum", "bass": "Bass", "guitar_rhythm": "Guitar rhythm", "guitar_lead": "Guitar lead", "keyboard": "Keyboard", "sax": "Sax" },
+  "skills": {
+    "vocal": "Vocal",
+    "drum": "Drum",
+    "bass": "Bass",
+    "guitar_rhythm": "Guitar rhythm",
+    "guitar_lead": "Guitar lead",
+    "keyboard": "Keyboard",
+    "sax": "Sax"
+  },
   "admin": {
     "title": "Quản trị · Thành viên",
     "add": "Thêm thành viên",

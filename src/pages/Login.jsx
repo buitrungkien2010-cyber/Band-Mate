@@ -16,6 +16,7 @@ export default function Login() {
   const [busy, setBusy] = useState(false)
   const [showEmail, setShowEmail] = useState(false)
   const [email, setEmail] = useState('')
+  const [showPw, setShowPw] = useState(false)
   const zalo = isZalo()
 
   const google = async () => {
@@ -45,43 +46,67 @@ export default function Login() {
   return (
     <div className="login">
       <div className="login-top"><LangSwitch onChange={setLang} /></div>
-      <h1 className="brand">🎸 Band Mate</h1>
-      <h2>{t('login.title')}</h2>
 
-      {noAccess && <p className="alert">{t('login.no_access')}</p>}
+      <div className="login-hero">
+        <img className="login-logo" src="/logo-512.png" alt="Logo Tạm Band" />
+        <p className="login-band">TẠM BAND</p>
+        <p className="login-tag">{t('login.tagline')}</p>
+      </div>
 
-      {zalo ? (
-        <p className="note">{t('login.zalo_hint')}</p>
-      ) : (
-        <>
-          <button className="btn btn-google" onClick={google}>{t('login.google')}</button>
-          <div className="divider">{t('login.or')}</div>
-        </>
-      )}
+      <div className="login-main">
+        <div className="login-head">
+          <h1>{t('login.heading')}</h1>
+          <p>{t('login.sub')}</p>
+        </div>
 
-      <form onSubmit={submit} className="stack">
-        <label>{t('login.username')}
-          <input value={username} onChange={(e) => setUsername(e.target.value)}
-            autoCapitalize="none" autoCorrect="off" autoComplete="username" required />
-        </label>
-        <label>{t('login.password')}
-          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)}
-            autoComplete="current-password" required />
-        </label>
-        <button className="btn btn-primary" disabled={busy}>{t('login.submit')}</button>
-      </form>
-      <p className="muted small">{t('login.forgot')}</p>
+        {noAccess && <p className="alert" role="alert">{t('login.no_access')}</p>}
 
-      {msg && <p className="note">{msg}</p>}
+        {zalo ? (
+          <p className="note">{t('login.zalo_hint')}</p>
+        ) : (
+          <>
+            <button className="btn btn-google" onClick={google}>
+              <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              {t('login.google')}
+            </button>
+            <div className="divider">{t('login.or')}</div>
+          </>
+        )}
 
-      <button className="linkbtn small" onClick={() => setShowEmail(!showEmail)}>{t('login.email_link')}</button>
-      {showEmail && (
-        <form onSubmit={sendLink} className="row">
-          <input type="email" placeholder={t('login.email_placeholder')} value={email}
-            onChange={(e) => setEmail(e.target.value)} required />
-          <button className="btn" disabled={busy}>{t('login.email_send')}</button>
+        <form onSubmit={submit} className="stack">
+          <label>{t('login.username')}
+            <input value={username} onChange={(e) => setUsername(e.target.value)} placeholder={t('login.username_ph')}
+              autoCapitalize="none" autoCorrect="off" autoComplete="username" required />
+          </label>
+          <label>{t('login.password')}
+            <div className="pw">
+              <input type={showPw ? 'text' : 'password'} value={password} onChange={(e) => setPassword(e.target.value)}
+                placeholder={t('login.password')} autoComplete="current-password" required />
+              <button type="button" aria-pressed={showPw} onClick={() => setShowPw(!showPw)}>
+                {t(showPw ? 'login.hide' : 'login.show')}
+              </button>
+            </div>
+          </label>
+          <button className="btn btn-primary" disabled={busy}>{t('login.submit')}</button>
         </form>
-      )}
+
+        {msg && <p className="note" role="status">{msg}</p>}
+
+        <div className="login-help">
+          <p>{t('login.help_noacc')}</p>
+          <p>{t('login.forgot')}</p>
+          <p>{t('login.help_zalo')}</p>
+        </div>
+
+        <button className="linkbtn" onClick={() => setShowEmail(!showEmail)}>{t('login.email_link')}</button>
+        {showEmail && (
+          <form onSubmit={sendLink} className="row">
+            <input type="email" placeholder={t('login.email_placeholder')} value={email}
+              onChange={(e) => setEmail(e.target.value)} required />
+            <button className="btn" disabled={busy}>{t('login.email_send')}</button>
+          </form>
+        )}
+      </div>
     </div>
   )
 }

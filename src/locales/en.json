@@ -1,10 +1,25 @@
 {
-  "app": { "name": "Band Mate", "loading": "Loading…", "save": "Save", "saved": "Saved", "cancel": "Cancel", "error": "Error: {{msg}}", "coming": "Coming in slice {{slice}}" },
-  "nav": { "home": "Home", "rehearsals": "Rehearsals", "tasks": "Tasks", "songs": "Songs", "profile": "Profile" },
+  "app": {
+    "name": "Band Mate",
+    "loading": "Loading…",
+    "save": "Save",
+    "saved": "Saved",
+    "cancel": "Cancel",
+    "error": "Error: {{msg}}",
+    "coming": "Coming in slice {{slice}}"
+  },
+  "nav": {
+    "home": "Home",
+    "rehearsals": "Rehearsals",
+    "tasks": "Tasks",
+    "songs": "Songs",
+    "profile": "Profile",
+    "main": "Main navigation"
+  },
   "login": {
     "title": "Sign in",
     "google": "Sign in with Google",
-    "or": "or",
+    "or": "or use your band account",
     "username": "Username",
     "password": "Password",
     "submit": "Sign in",
@@ -15,9 +30,21 @@
     "email_placeholder": "Your Gmail",
     "email_send": "Send link",
     "email_sent": "Sent. Open Gmail and tap the link.",
-    "forgot": "Forgot your password? Ask the Admin to reset it."
+    "forgot": "Forgot your password? Ask the Admin to reset it.",
+    "heading": "Sign in to Band Mate",
+    "sub": "Use the Gmail or username your band leader gave you.",
+    "tagline": "Songs, rehearsals, shows and gear for the whole band in one place.",
+    "username_ph": "e.g. duong",
+    "show": "Show",
+    "hide": "Hide",
+    "help_noacc": "No account yet: ask the band leader to add you under Members.",
+    "help_zalo": "Opened from Zalo and Google sign-in fails: choose \"Open in browser\" (Chrome or Safari)."
   },
-  "home": { "hello": "Hi {{name}}!", "intro": "Rehearsals and My tasks will appear here (slice SL-04)." },
+  "home": {
+    "hello": "Hi {{name}}!",
+    "intro": "Rehearsals and My tasks will appear here (slice SL-04).",
+    "next_title": "Next rehearsal"
+  },
   "profile": {
     "title": "Profile",
     "nickname": "Nickname",
@@ -28,9 +55,18 @@
     "admin": "Admin",
     "logout": "Sign out",
     "role_admin": "Admin",
-    "role_member": "Member"
+    "role_member": "Member",
+    "info": "Details"
   },
-  "skills": { "vocal": "Vocal", "drum": "Drum", "bass": "Bass", "guitar_rhythm": "Rhythm guitar", "guitar_lead": "Lead guitar", "keyboard": "Keyboard", "sax": "Sax" },
+  "skills": {
+    "vocal": "Vocal",
+    "drum": "Drum",
+    "bass": "Bass",
+    "guitar_rhythm": "Rhythm guitar",
+    "guitar_lead": "Lead guitar",
+    "keyboard": "Keyboard",
+    "sax": "Sax"
+  },
   "admin": {
     "title": "Admin · Members",
     "add": "Add member",
