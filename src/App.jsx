@@ -7,6 +7,7 @@ import Profile from './pages/Profile'
 import AdminMembers from './pages/AdminMembers'
 import AdminData from './pages/AdminData'
 import Placeholder from './pages/Placeholder'
+import Songs from './pages/Songs'
 
 const P = { fill: 'none', stroke: 'currentColor', strokeWidth: 1.8, strokeLinecap: 'round', strokeLinejoin: 'round' }
 const ICONS = {
@@ -40,7 +41,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/rehearsals" element={<Placeholder titleKey="nav.rehearsals" slice="SL-04" />} />
           <Route path="/tasks" element={<Placeholder titleKey="nav.tasks" slice="SL-04" />} />
-          <Route path="/songs" element={<Placeholder titleKey="nav.songs" slice="SL-03" />} />
+          <Route path="/songs" element={<Songs />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/admin/members" element={isAdmin ? <AdminMembers /> : <Navigate to="/" />} />
           <Route path="/admin/data" element={isAdmin ? <AdminData /> : <Navigate to="/" />} />

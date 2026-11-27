@@ -114,5 +114,20 @@
     "backup_hint": "Every Sunday 23:00 the app backs up automatically and keeps the 4 latest copies.",
     "no_backup": "No backups yet.",
     "download": "Download"
+  },
+  "songs": {
+    "search": "Search song, artist",
+    "filter": "Filter by progress",
+    "all": "All",
+    "p100": "Full band",
+    "p80": "Missing parts",
+    "p50": "Structured",
+    "p0": "Not rehearsed",
+    "pnone": "Not rated",
+    "pnone_short": "—",
+    "stats": "{{total}} songs · {{full}} full band",
+    "count": "{{n}} songs",
+    "empty": "No matching songs.",
+    "estimated": "* estimated duration"
   }
 }

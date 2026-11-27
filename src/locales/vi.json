@@ -114,5 +114,20 @@
     "backup_hint": "Mỗi Chủ nhật 23:00 app tự sao lưu, giữ 4 bản gần nhất.",
     "no_backup": "Chưa có bản sao lưu nào.",
     "download": "Tải"
+  },
+  "songs": {
+    "search": "Tìm bài, ca sĩ",
+    "filter": "Lọc theo tiến độ",
+    "all": "Tất cả",
+    "p100": "Full band",
+    "p80": "Thiếu nhạc cụ",
+    "p50": "Đã lên khung",
+    "p0": "Chưa tập",
+    "pnone": "Chưa đánh giá",
+    "pnone_short": "—",
+    "stats": "{{total}} bài · {{full}} full band",
+    "count": "{{n}} bài",
+    "empty": "Không có bài nào khớp.",
+    "estimated": "* thời lượng ước tính"
   }
 }
