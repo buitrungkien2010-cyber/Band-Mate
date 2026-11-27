@@ -5,7 +5,6 @@ import { supabase } from '../supabase'
 import { useAuth } from '../auth'
 import { fmtDate, fmtTime, daysUntil, versionLabel } from '../lib/format'
 import RehearsalForm from './RehearsalForm'
-import CommentComposer from '../components/CommentComposer'
 import TaskTable from '../components/TaskTable'
 
 // Chi tiet buoi tap: thong tin, bai se tap, link gui Zalo (US-05). Nhan xet: buoc 3.
@@ -103,12 +102,8 @@ export default function RehearsalDetail() {
         </div>
       )}
       {msg && <p className="note" role="status">{msg}</p>}
-      <CommentComposer rehearsal={r} songs={songs} onAdded={loadTasks} />
-
       <h2 className="card-title" style={{ marginTop: 16 }}>{t('task.list_title', { n: tasks.length })}</h2>
-      {tasks.length === 0 ? <p className="muted small">{t('task.none')}</p> : (
-        <TaskTable tasks={tasks} members={members} rehearsals={allReh} onChange={loadTasks} />
-      )}
+      <TaskTable rehearsal={r} songs={songs} tasks={tasks} members={members} rehearsals={allReh} onChange={loadTasks} />
     </section>
   )
 }
