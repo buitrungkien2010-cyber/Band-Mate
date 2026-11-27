@@ -8,6 +8,7 @@ import AdminMembers from './pages/AdminMembers'
 import AdminData from './pages/AdminData'
 import Songs from './pages/Songs'
 import Tasks from './pages/Tasks'
+import Guide from './pages/Guide'
 import Rehearsals from './pages/Rehearsals'
 import RehearsalDetail from './pages/RehearsalDetail'
 
@@ -46,6 +47,7 @@ export default function App() {
           <Route path="/tasks" element={<Tasks />} />
           <Route path="/songs" element={<Songs />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/guide" element={<Guide />} />
           <Route path="/admin/members" element={isAdmin ? <AdminMembers /> : <Navigate to="/" />} />
           <Route path="/admin/data" element={isAdmin ? <AdminData /> : <Navigate to="/" />} />
           <Route path="*" element={<Navigate to="/" />} />

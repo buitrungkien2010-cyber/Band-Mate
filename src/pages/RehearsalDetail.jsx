@@ -5,6 +5,8 @@ import { supabase } from '../supabase'
 import { useAuth } from '../auth'
 import { fmtDate, fmtTime, daysUntil, versionLabel } from '../lib/format'
 import RehearsalForm from './RehearsalForm'
+import { shareText, ZALO_WEB } from '../lib/share'
+import { buildTaskMessage } from '../lib/taskMessage'
 import TaskTable from '../components/TaskTable'
 import CommentForm from '../components/CommentForm'
 
@@ -52,11 +54,17 @@ export default function RehearsalDetail() {
   const share = async () => {
     const text = `${t('reh.share_title')}: ${fmtDate(r.starts_at, i18n.language)} ${fmtTime(r.starts_at)}${r.location ? ` — ${r.location}` : ''}\n`
       + songs.map((v, i) => `${i + 1}. ${versionLabel(v)}`).join('\n') + `\n${link}`
-    try {
-      if (navigator.share) { await navigator.share({ text }); return }
-      await navigator.clipboard.writeText(text)
-      setMsg(t('reh.copied'))
-    } catch { /* nguoi dung huy */ }
+    const res = await shareText(text)
+    if (res === 'copied') setMsg(t('reh.copied'))
+  }
+
+  const [zaloText, setZaloText] = useState('')
+  const sendTasks = async () => {
+    const text = buildTaskMessage({ rehearsal: r, tasks, members, rehearsals: allReh, t, origin: window.location.origin })
+    setZaloText(text)
+    const res = await shareText(text)
+    if (res === 'copied') setMsg(t('zalo.copied'))
+    else if (res === 'failed') setMsg(t('zalo.copy_failed'))
   }
 
   const cancelRehearsal = async () => {
@@ -93,7 +101,7 @@ export default function RehearsalDetail() {
               </ol>
             ) : <p className="muted small">{t('reh.no_songs')}</p>}
           </div>
-          <button className="btn" onClick={share}>{t('reh.share')}</button>
+          <button className="btn" onClick={share}>{t('reh.share_schedule')}</button>
           {isAdmin && (
             <div className="row" style={{ marginTop: 0 }}>
               <button className="btn btn-sm" onClick={() => setEditing(true)}>{t('reh.edit')}</button>
@@ -105,7 +113,22 @@ export default function RehearsalDetail() {
       {msg && <p className="note" role="status">{msg}</p>}
       <CommentForm rehearsal={r} songs={songs} members={members} rehearsals={allReh} onChange={loadTasks} />
 
-      <h2 className="card-title" style={{ marginTop: 16 }}>{t('task.list_title', { n: tasks.length })}</h2>
+      <div className="row-between list-head">
+        <h2 className="card-title" style={{ margin: 0 }}>{t('task.list_title', { n: tasks.length })}</h2>
+        {isAdmin && tasks.length > 0 && <button className="btn btn-sm btn-primary" onClick={sendTasks}>{t('zalo.send_tasks')}</button>}
+      </div>
+      {zaloText && (
+        <div className="card zalo-preview">
+          <div className="row-between">
+            <span className="small muted">{t('zalo.preview')}</span>
+            <div className="row" style={{ marginTop: 0 }}>
+              <a className="btn btn-sm" href={ZALO_WEB} target="_blank" rel="noreferrer">{t('zalo.open')}</a>
+              <button className="btn btn-sm btn-ghost" onClick={() => setZaloText('')}>×</button>
+            </div>
+          </div>
+          <pre>{zaloText}</pre>
+        </div>
+      )}
       {tasks.length === 0 ? <p className="muted small">{t('task.none')}</p>
         : <TaskTable tasks={tasks} members={members} rehearsals={allReh} onChange={loadTasks} />}
     </section>

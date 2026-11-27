@@ -166,11 +166,11 @@
     "none_upcoming": "No upcoming rehearsal.",
     "not_found": "Rehearsal not found.",
     "no_songs": "No songs selected.",
-    "share": "Send to Zalo",
     "share_title": "Tạm Band rehearsal",
     "copied": "Copied. Open Zalo and paste into the group.",
     "cancel": "Cancel rehearsal",
-    "cancel_confirm": "Cancel this rehearsal? It will be hidden from the list."
+    "cancel_confirm": "Cancel this rehearsal? It will be hidden from the list.",
+    "share_schedule": "Send schedule to Zalo"
   },
   "task": {
     "new_comment": "Add comment",
@@ -230,5 +230,40 @@
     "keyboard": "Keyboard",
     "sax": "Sax",
     "general": "General"
+  },
+  "zalo": {
+    "title": "Tasks after rehearsal {{d}}",
+    "tick_hint": "When done, tap \"Fixed\" in the app:",
+    "send_tasks": "Send tasks to Zalo",
+    "preview": "Message created (copied if on a computer):",
+    "open": "Open Zalo",
+    "copied": "Task list copied. Open Zalo and paste into the band group.",
+    "copy_failed": "Could not copy automatically. Select the text below and copy it."
+  },
+  "guide": {
+    "title": "Guide",
+    "intro": "Band Mate replaces the Master file: rehearsals, songs and rehearsal comments in one place.",
+    "login_title": "Sign in",
+    "login_1": "Open the app link shared in the Zalo group.",
+    "login_2": "Sign in with the username + password from the Admin (or Google in Chrome / Safari).",
+    "login_3": "Opened from Zalo and Google does not work: choose \"Open in browser\".",
+    "member_title": "For members",
+    "member_1": "Home: see the next rehearsal and \"My tasks\".",
+    "member_2": "During rehearsal: open the rehearsal → Add comment → pick song, part, type the comment → Add.",
+    "member_3": "Done with your part: tap \"Fixed\". The task moves to To check.",
+    "member_4": "Need to add info: type in Notes (tasks you wrote or were assigned).",
+    "admin_title": "For Admins",
+    "admin_1": "Create a rehearsal: Rehearsals tab → New rehearsal → pick date, time, songs.",
+    "admin_2": "Assign an owner + due date to each comment (default due = next rehearsal).",
+    "admin_3": "After rehearsal: tap \"Send tasks to Zalo\" to tell the band.",
+    "admin_4": "Next rehearsal: To check box → OK · Done or Reopen.",
+    "admin_5": "Track K2 on Home: target 100% assigned, ≥90% fixed before the next rehearsal.",
+    "status_title": "Task status",
+    "status_1": "Unassigned: no owner yet.",
+    "status_2": "In progress: assigned to someone.",
+    "status_3": "To check: owner tapped Fixed, Admin checks at the next rehearsal.",
+    "status_4": "Done: Admin confirmed it is OK.",
+    "help_title": "Report a problem",
+    "help_1": "Found a bug or have feedback: send a screenshot to the band Zalo group, saying which screen and what you tapped."
   }
 }

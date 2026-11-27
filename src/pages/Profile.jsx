@@ -66,6 +66,7 @@ export default function Profile() {
 
       {msg && <p className="note">{msg}</p>}
 
+      <Link className="btn" to="/guide">{t('guide.title')} →</Link>
       {isAdmin && <Link className="btn" to="/admin/members">{t('profile.admin')} →</Link>}
       {isAdmin && <Link className="btn" to="/admin/data">{t('data.title')} →</Link>}
       <button className="btn btn-ghost" onClick={signOut}>{t('profile.logout')}</button>

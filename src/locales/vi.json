@@ -166,11 +166,11 @@
     "none_upcoming": "Chưa có buổi tập sắp tới.",
     "not_found": "Không thấy buổi tập này.",
     "no_songs": "Chưa chọn bài.",
-    "share": "Gửi vào Zalo",
     "share_title": "Lịch tập Tạm Band",
     "copied": "Đã sao chép. Mở Zalo và dán vào nhóm.",
     "cancel": "Hủy buổi tập",
-    "cancel_confirm": "Hủy buổi tập này? Buổi tập sẽ ẩn khỏi danh sách."
+    "cancel_confirm": "Hủy buổi tập này? Buổi tập sẽ ẩn khỏi danh sách.",
+    "share_schedule": "Gửi lịch tập vào Zalo"
   },
   "task": {
     "new_comment": "Ghi nhận xét",
@@ -230,5 +230,40 @@
     "keyboard": "Keyboard",
     "sax": "Sax",
     "general": "Chung"
+  },
+  "zalo": {
+    "title": "Việc sau buổi tập {{d}}",
+    "tick_hint": "Sửa xong bấm \"Đã sửa\" trong app:",
+    "send_tasks": "Gửi việc vào Zalo",
+    "preview": "Đoạn tin đã tạo (đã sao chép nếu dùng máy tính):",
+    "open": "Mở Zalo",
+    "copied": "Đã sao chép danh sách việc. Mở Zalo và dán vào nhóm band.",
+    "copy_failed": "Không sao chép tự động được. Chọn đoạn tin bên dưới và sao chép tay."
+  },
+  "guide": {
+    "title": "Hướng dẫn",
+    "intro": "Band Mate thay cho Master file: lịch tập, kho bài và nhận xét sau buổi tập ở cùng một chỗ.",
+    "login_title": "Đăng nhập",
+    "login_1": "Mở link app band gửi trong nhóm Zalo.",
+    "login_2": "Đăng nhập bằng username + mật khẩu Admin cấp (hoặc Google nếu dùng Chrome / Safari).",
+    "login_3": "Mở từ Zalo mà không vào được Google: chọn \"Mở bằng trình duyệt\".",
+    "member_title": "Thành viên làm gì",
+    "member_1": "Trang chủ: xem buổi tập tới và \"Việc của tôi\".",
+    "member_2": "Trong buổi tập: vào trang buổi tập → khung Ghi nhận xét → chọn bài, vị trí, gõ nhận xét → Thêm.",
+    "member_3": "Sửa xong phần của mình: bấm \"Đã sửa\". Việc chuyển sang Chờ kiểm tra.",
+    "member_4": "Cần bổ sung thông tin: gõ vào ô Ghi chú (việc mình ghi hoặc được giao).",
+    "admin_title": "Admin làm gì",
+    "admin_1": "Tạo buổi tập: tab Buổi tập → Tạo buổi tập → chọn ngày, giờ, bài.",
+    "admin_2": "Gán người nhận + thời hạn cho từng nhận xét (mặc định hạn = buổi tập kế).",
+    "admin_3": "Sau buổi tập: bấm \"Gửi việc vào Zalo\" để báo cả band.",
+    "admin_4": "Buổi tập sau: hộp Chờ kiểm tra → Đạt · Hoàn thiện hoặc Mở lại.",
+    "admin_5": "Theo dõi K2 ở trang chủ: mục tiêu 100% có người nhận, ≥90% sửa xong trước buổi kế.",
+    "status_title": "Trạng thái của việc",
+    "status_1": "Chưa gán: nhận xét chưa có người nhận.",
+    "status_2": "Đang sửa: đã giao cho một người.",
+    "status_3": "Chờ kiểm tra: người nhận đã bấm Đã sửa, Admin kiểm ở buổi sau.",
+    "status_4": "Đã hoàn thiện: Admin xác nhận đạt.",
+    "help_title": "Báo lỗi",
+    "help_1": "Gặp lỗi hoặc có góp ý: chụp màn hình gửi vào nhóm Zalo của band, ghi rõ đang ở màn nào và đã bấm gì."
   }
 }
