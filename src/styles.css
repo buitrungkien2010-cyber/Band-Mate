@@ -232,7 +232,7 @@ input[type=date], input[type=time] { color-scheme: dark; }
 .ttable .c-note { min-width: 180px; }
 .ttable .ditto { visibility: hidden; }
 .ttable tr.st-closed td { opacity: .55; }
-.ttable .new-row td { background: var(--accent-soft); background: rgba(233, 185, 73, .06); }
+.ttable .new-row td { background: var(--card); }
 .ttable .new-row .msg-row td { padding-top: 0; }
 .cell-stack { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; }
 .cell-row { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
@@ -241,15 +241,17 @@ input[type=date], input[type=time] { color-scheme: dark; }
 .cancel-link { min-height: 28px; padding: 0; font-size: 12px; color: var(--muted); }
 .ttable .linkbtn { min-height: 28px; padding: 0; }
 
+/* Dien thoai: giu dang bang, vuot ngang; cot Ten bai co dinh ben trai */
+.ttable th.c-song, .ttable td.c-song { position: sticky; left: 0; z-index: 1; background: var(--card); }
+.ttable th.c-song { background: var(--bg-2); }
+.ttable .new-row td.c-song { background: var(--card); }
 @media (max-width: 760px) {
-  .ttable thead { display: none; }
-  .ttable, .ttable tbody, .ttable tr, .ttable td { display: block; width: 100%; }
-  .ttable tr { padding: 10px 12px; border-top: 1px solid var(--line); }
-  .ttable tbody + tbody tr.g-first { border-top: 1px solid var(--line-2); }
-  .ttable td { border: 0; padding: 3px 0; display: grid; grid-template-columns: 96px 1fr; gap: 8px; align-items: center; min-width: 0; }
-  .ttable td::before { content: attr(data-label); font-size: 11px; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: .04em; }
-  .ttable .msg-row td { display: block; }
-  .ttable .msg-row td::before { content: none; }
-  .ttable .ditto { visibility: visible; }
+  .ttable .c-song { min-width: 128px; max-width: 128px; }
+  .ttable td.c-song { box-shadow: 1px 0 0 var(--line-2); }
 }
+.composer-card { padding: 14px 14px 10px; }
+.composer-card .ttable-wrap { border-radius: 10px; }
+.composer-card .card-title { margin: 0 0 10px; }
+.scroll-hint { display: none; }
+@media (max-width: 760px) { .scroll-hint { display: block; font-size: 11px; color: var(--faint); margin: 6px 2px 0; } }
 @media (min-width: 900px) { .content:has(.ttable-wrap) { max-width: 1240px; } }

@@ -196,7 +196,8 @@
     "assign_later": "Assign later",
     "admin_assigns": "Admin assigns",
     "add": "Add",
-    "need_fields": "Pick song, part and type a comment."
+    "need_fields": "Pick song, part and type a comment.",
+    "scroll_hint": "← swipe to see all columns →"
   },
   "pos": {
     "vocal": "Vocal",

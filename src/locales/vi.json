@@ -196,7 +196,8 @@
     "assign_later": "Gán sau",
     "admin_assigns": "Admin gán",
     "add": "Thêm",
-    "need_fields": "Chọn bài, vị trí và gõ nhận xét."
+    "need_fields": "Chọn bài, vị trí và gõ nhận xét.",
+    "scroll_hint": "← vuốt ngang để xem đủ cột →"
   },
   "pos": {
     "vocal": "Vocal",
