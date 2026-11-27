@@ -156,7 +156,42 @@
     "share_title": "Tạm Band rehearsal",
     "copied": "Copied. Open Zalo and paste into the group.",
     "cancel": "Cancel rehearsal",
-    "cancel_confirm": "Cancel this rehearsal? It will be hidden from the list.",
-    "comments_soon": "Comments come in the next step."
+    "cancel_confirm": "Cancel this rehearsal? It will be hidden from the list."
+  },
+  "task": {
+    "new_comment": "Add comment",
+    "pick_song": "Pick song",
+    "pick_pos": "Pick part",
+    "general_song": "Whole session",
+    "content_ph": "Comment: what to fix?",
+    "send": "Send",
+    "saved": "Comment saved. Pick another part to add more.",
+    "list_title": "Comments ({{n}})",
+    "none": "No comments yet.",
+    "unassigned": "Not assigned",
+    "due": "Due",
+    "due_next": "Next rehearsal",
+    "by": "by {{name}}",
+    "assign": "Assign to",
+    "cancel": "Cancel",
+    "fixed": "Fixed",
+    "close": "OK · Close",
+    "reopen": "Reopen",
+    "stale": "Someone just updated this task. Reloaded.",
+    "st_new": "Unassigned",
+    "st_in_progress": "In progress",
+    "st_pending_review": "To check",
+    "st_closed": "Closed",
+    "st_cancelled": "Cancelled"
+  },
+  "pos": {
+    "vocal": "Vocal",
+    "drum": "Drum",
+    "bass": "Bass",
+    "guitar_rhythm": "Rhythm guitar",
+    "guitar_lead": "Lead guitar",
+    "keyboard": "Keyboard",
+    "sax": "Sax",
+    "general": "General"
   }
 }

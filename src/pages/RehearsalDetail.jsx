@@ -5,6 +5,8 @@ import { supabase } from '../supabase'
 import { useAuth } from '../auth'
 import { fmtDate, fmtTime, daysUntil, versionLabel } from '../lib/format'
 import RehearsalForm from './RehearsalForm'
+import CommentComposer from '../components/CommentComposer'
+import TaskItem from '../components/TaskItem'
 
 // Chi tiet buoi tap: thong tin, bai se tap, link gui Zalo (US-05). Nhan xet: buoc 3.
 export default function RehearsalDetail() {
@@ -16,6 +18,22 @@ export default function RehearsalDetail() {
   const [songs, setSongs] = useState([])
   const [editing, setEditing] = useState(false)
   const [msg, setMsg] = useState('')
+  const [tasks, setTasks] = useState([])
+  const [members, setMembers] = useState([])
+  const [allReh, setAllReh] = useState([])
+
+  const loadTasks = useCallback(async () => {
+    const { data } = await supabase.from('tasks')
+      .select('*, song_versions(label, song_key, songs(title))')
+      .eq('rehearsal_id', id).neq('status', 'cancelled').order('created_at')
+    setTasks(data || [])
+  }, [id])
+
+  useEffect(() => {
+    loadTasks()
+    supabase.from('members').select('id, nickname, is_active').order('nickname').then(({ data }) => setMembers(data || []))
+    supabase.from('rehearsals').select('id, starts_at').eq('status', 'scheduled').order('starts_at').then(({ data }) => setAllReh(data || []))
+  }, [loadTasks])
 
   const load = useCallback(async () => {
     const { data, error } = await supabase.from('rehearsals').select('*').eq('id', id).maybeSingle()
@@ -85,7 +103,14 @@ export default function RehearsalDetail() {
         </div>
       )}
       {msg && <p className="note" role="status">{msg}</p>}
-      <div className="card muted small">{t('reh.comments_soon')}</div>
+      <CommentComposer rehearsal={r} songs={songs} onAdded={loadTasks} />
+
+      <h2 className="card-title" style={{ marginTop: 16 }}>{t('task.list_title', { n: tasks.length })}</h2>
+      {tasks.length === 0 ? <p className="muted small">{t('task.none')}</p> : (
+        <ul className="task-list">
+          {tasks.map((k) => <TaskItem key={k.id} task={k} members={members} rehearsals={allReh} onChange={loadTasks} />)}
+        </ul>
+      )}
     </section>
   )
 }

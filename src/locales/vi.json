@@ -156,7 +156,42 @@
     "share_title": "Lịch tập Tạm Band",
     "copied": "Đã sao chép. Mở Zalo và dán vào nhóm.",
     "cancel": "Hủy buổi tập",
-    "cancel_confirm": "Hủy buổi tập này? Buổi tập sẽ ẩn khỏi danh sách.",
-    "comments_soon": "Phần ghi nhận xét sẽ có ở bước tiếp theo."
+    "cancel_confirm": "Hủy buổi tập này? Buổi tập sẽ ẩn khỏi danh sách."
+  },
+  "task": {
+    "new_comment": "Ghi nhận xét",
+    "pick_song": "Chọn bài",
+    "pick_pos": "Chọn vị trí",
+    "general_song": "Chung cả buổi",
+    "content_ph": "Nhận xét: cần sửa gì?",
+    "send": "Gửi",
+    "saved": "Đã lưu nhận xét. Chọn vị trí khác để ghi tiếp.",
+    "list_title": "Nhận xét ({{n}})",
+    "none": "Chưa có nhận xét.",
+    "unassigned": "Chưa gán người",
+    "due": "Hạn",
+    "due_next": "Buổi tập kế",
+    "by": "ghi bởi {{name}}",
+    "assign": "Gán cho",
+    "cancel": "Hủy",
+    "fixed": "Đã sửa",
+    "close": "Đạt · Đóng",
+    "reopen": "Mở lại",
+    "stale": "Việc vừa được người khác cập nhật. Đã tải lại.",
+    "st_new": "Chưa gán",
+    "st_in_progress": "Đang sửa",
+    "st_pending_review": "Chờ kiểm tra",
+    "st_closed": "Đã đóng",
+    "st_cancelled": "Đã hủy"
+  },
+  "pos": {
+    "vocal": "Vocal",
+    "drum": "Drum",
+    "bass": "Bass",
+    "guitar_rhythm": "Guitar rhythm",
+    "guitar_lead": "Guitar lead",
+    "keyboard": "Keyboard",
+    "sax": "Sax",
+    "general": "Chung"
   }
 }
