@@ -42,8 +42,22 @@
   },
   "home": {
     "hello": "Chào {{name}}!",
-    "intro": "Buổi tập và Việc của tôi sẽ hiện ở đây (lát SL-04).",
-    "next_title": "Buổi tập tới"
+    "next_title": "Buổi tập tới",
+    "open_reh": "Mở buổi tập",
+    "my_tasks": "Việc của tôi",
+    "my_none": "Không có việc nào đang chờ bạn.",
+    "unassigned": "Chưa gán",
+    "unassigned_none": "Mọi nhận xét đã có người nhận.",
+    "to_check": "Chờ kiểm tra",
+    "to_check_none": "Chưa có việc nào báo Đã sửa.",
+    "k2_title": "K2 theo buổi tập",
+    "k2_none": "Chưa có buổi tập nào có nhận xét.",
+    "k2_reh": "Buổi",
+    "k2_comments": "Nhận xét",
+    "k2_assigned": "Có người nhận",
+    "k2_fixed": "Sửa trước buổi kế",
+    "k2_running": "đang tính",
+    "k2_hint": "Mục tiêu: 100% có người nhận, ≥90% sửa xong trước buổi tập kế."
   },
   "profile": {
     "title": "Hồ sơ",
@@ -203,7 +217,9 @@
     "group_by": "Nhóm theo",
     "no_group": "Không nhóm",
     "clear_filter": "Bỏ lọc",
-    "no_match": "Không có nhận xét nào khớp bộ lọc."
+    "no_match": "Không có nhận xét nào khớp bộ lọc.",
+    "from_reh": "buổi {{d}}",
+    "total": "{{n}} việc"
   },
   "pos": {
     "vocal": "Vocal",

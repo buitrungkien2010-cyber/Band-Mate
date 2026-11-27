@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { versionLabel } from '../lib/format'
+import { versionLabel, fmtShort } from '../lib/format'
 import { MemberCell, StatusCell, DueCell, NoteCell } from './TaskCells'
 
 export const COLS = ['song', 'pos', 'member', 'text', 'status', 'due', 'note']
@@ -12,7 +13,7 @@ const NO_FILTER = { song: '', pos: '', member: '', status: '' }
 
 // Bang nhan xet 7 cot (Kien chot 27/11): Ten bai | Vi tri | Thanh vien | Nhan xet | Trang thai | Thoi han | Ghi chu.
 // Thanh loc + nhom theo truong giong nhau (Kien yeu cau 27/11). Dien thoai: vuot ngang, cot Ten bai co dinh.
-export default function TaskTable({ tasks, members, rehearsals, onChange, defaultGroup = 'song' }) {
+export default function TaskTable({ tasks, members, rehearsals, onChange, defaultGroup = 'song', filters = true, showRehearsal = false }) {
   const { t } = useTranslation()
   const label = (c) => t(`task.col_${c}`)
   const songOf = (k) => (k.song_versions ? versionLabel(k.song_versions) : t('task.general_song'))
@@ -58,7 +59,7 @@ export default function TaskTable({ tasks, members, rehearsals, onChange, defaul
 
   return (
     <>
-      <div className="tfilter" role="group" aria-label={t('task.filter')}>
+      {filters && <div className="tfilter" role="group" aria-label={t('task.filter')}>
         {FILTERS.map((f) => (
           <label key={f} className={flt[f] ? 'on' : ''}>
             <span>{label(f)}</span>
@@ -79,7 +80,7 @@ export default function TaskTable({ tasks, members, rehearsals, onChange, defaul
             {t('task.clear_filter')} ({shown.length}/{tasks.length})
           </button>
         )}
-      </div>
+      </div>}
 
       {shown.length === 0 ? <p className="muted small">{t('task.no_match')}</p> : (
         <div className="ttable-wrap">
@@ -97,7 +98,12 @@ export default function TaskTable({ tasks, members, rehearsals, onChange, defaul
                 )}
                 {g.items.map((k) => (
                   <tr key={k.id} className={`st-${k.status}`}>
-                    <td className="c-song">{groupBy === 'song' ? <span className="muted small">{songOf(k)}</span> : songOf(k)}</td>
+                    <td className="c-song">
+                      {groupBy === 'song' ? <span className="muted small">{songOf(k)}</span> : songOf(k)}
+                      {showRehearsal && k.rehearsals && (
+                        <Link to={`/rehearsals/${k.rehearsal_id}`} className="reh-link">{t('task.from_reh', { d: fmtShort(k.rehearsals.starts_at) })}</Link>
+                      )}
+                    </td>
                     <td className="c-pos">{t(`pos.${k.position}`)}</td>
                     <td className="c-member"><MemberCell task={k} members={members} onChange={onChange} /></td>
                     <td className="c-text">{k.content}</td>

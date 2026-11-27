@@ -42,8 +42,22 @@
   },
   "home": {
     "hello": "Hi {{name}}!",
-    "intro": "Rehearsals and My tasks will appear here (slice SL-04).",
-    "next_title": "Next rehearsal"
+    "next_title": "Next rehearsal",
+    "open_reh": "Open rehearsal",
+    "my_tasks": "My tasks",
+    "my_none": "Nothing waiting for you.",
+    "unassigned": "Unassigned",
+    "unassigned_none": "Every comment has an owner.",
+    "to_check": "To check",
+    "to_check_none": "No task marked Fixed yet.",
+    "k2_title": "K2 by rehearsal",
+    "k2_none": "No rehearsal with comments yet.",
+    "k2_reh": "Rehearsal",
+    "k2_comments": "Comments",
+    "k2_assigned": "Assigned",
+    "k2_fixed": "Fixed before next",
+    "k2_running": "in progress",
+    "k2_hint": "Target: 100% assigned, ≥90% fixed before the next rehearsal."
   },
   "profile": {
     "title": "Profile",
@@ -203,7 +217,9 @@
     "group_by": "Group by",
     "no_group": "No grouping",
     "clear_filter": "Clear filters",
-    "no_match": "No comments match the filters."
+    "no_match": "No comments match the filters.",
+    "from_reh": "rehearsal {{d}}",
+    "total": "{{n}} tasks"
   },
   "pos": {
     "vocal": "Vocal",

@@ -267,3 +267,18 @@ input[type=date], input[type=time] { color-scheme: dark; }
 .ttable .grp-row td.c-song { background: var(--bg-2); white-space: nowrap; }
 .grp-n { display: inline-block; margin-left: 6px; font-size: 11px; color: var(--accent-ink); background: var(--accent); border-radius: 999px; padding: 1px 7px; }
 @media (max-width: 760px) { .tfilter label { flex: 1 1 calc(50% - 8px); max-width: none; } }
+
+/* Trang chu (SCR-02) */
+.home-box { margin: 0 0 16px; }
+.home-box .row-between { margin-bottom: 8px; }
+.home-box .scroll-hint { margin-top: 4px; }
+.next-reh { display: flex; flex-direction: column; gap: 4px; margin-top: 10px; text-decoration: none; color: var(--ink); }
+.next-reh:hover { color: var(--ink); }
+.next-date { font-size: var(--fs-lg); font-weight: 700; }
+.reh-link { display: block; font-size: 11px; font-weight: 500; color: var(--muted); text-decoration: none; margin-top: 2px; }
+.reh-link:hover { color: var(--accent); }
+.k2-table { width: 100%; border-collapse: collapse; font-size: var(--fs-sm); }
+.k2-table th { text-align: left; font-size: 11px; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: .04em; padding: 6px 8px 6px 0; }
+.k2-table td { padding: 8px 8px 8px 0; border-top: 1px solid var(--line); font-weight: 600; }
+.k2-table td.ok { color: var(--ok); }
+.k2-table a { text-decoration: none; }
