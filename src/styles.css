@@ -178,3 +178,20 @@ section > .btn { width: 100%; }
 .prog.p0 { background: var(--chip); color: var(--faint); }
 .prog.pnone { background: transparent; color: var(--faint); border: 1px dashed var(--line-2); }
 .center-text { text-align: center; padding: 12px 0; }
+
+/* Buoi tap (SCR-03) */
+.reh-row { display: flex; gap: 12px; align-items: center; background: var(--card); border: 1px solid var(--line);
+  border-radius: 14px; padding: 12px 14px; min-height: 64px; color: var(--ink); text-decoration: none; }
+.reh-row:hover { color: var(--ink); border-color: var(--line-2); }
+.chev { color: var(--muted); font-size: 22px; }
+.pill-accent { flex-shrink: 0; font-size: var(--fs-xs); font-weight: 600; background: var(--accent-soft); color: var(--accent);
+  padding: 4px 10px; border-radius: 999px; }
+.picked { list-style: none; margin: 8px 0 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.picked li { display: flex; justify-content: space-between; align-items: center; gap: 8px; background: var(--chip);
+  border-radius: var(--r-sm); padding: 6px 6px 6px 12px; font-size: var(--fs-sm); min-height: 40px; }
+.btn-x { border: 0; background: transparent; color: var(--muted); font-size: 20px; width: 36px; height: 36px; cursor: pointer; border-radius: 8px; }
+.pick-results { list-style: none; margin: 6px 0 0; padding: 0; border: 1px solid var(--line-2); border-radius: var(--r); overflow: hidden; }
+.pick-results button { display: block; width: 100%; text-align: left; font: inherit; font-size: var(--fs-sm); color: var(--ink);
+  background: var(--card); border: 0; border-bottom: 1px solid var(--line); padding: 10px 12px; min-height: 44px; cursor: pointer; }
+.pick-results li:last-child button { border-bottom: 0; }
+input[type=date], input[type=time] { color-scheme: dark; }
