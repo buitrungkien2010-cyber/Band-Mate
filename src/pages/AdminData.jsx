@@ -6,7 +6,7 @@ import { useAuth } from '../auth'
 import AdminTabs from './AdminTabs'
 
 // Bang xuat Excel / sao luu (US-04, N4). Them bang moi o cac lat sau vao day.
-export const EXPORT_TABLES = ['bands', 'members', 'songs', 'song_versions', 'audit_log']
+export const EXPORT_TABLES = ['bands', 'members', 'songs', 'song_versions', 'rehearsals', 'tasks', 'audit_log']
 
 const today = () => new Date().toISOString().slice(0, 10)
 const fmtDate = (d) => new Date(d).toLocaleString('vi-VN', { timeZone: 'Asia/Bangkok', hour12: false })

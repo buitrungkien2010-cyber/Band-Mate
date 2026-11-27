@@ -4,7 +4,7 @@
 import { createClient } from 'npm:@supabase/supabase-js@2'
 import * as XLSX from 'npm:xlsx@0.18.5'
 
-const TABLES = ['bands', 'members', 'songs', 'song_versions', 'audit_log'] // them bang moi o cac lat sau
+const TABLES = ['bands', 'members', 'songs', 'song_versions', 'rehearsals', 'tasks', 'audit_log'] // them bang moi o cac lat sau
 const KEEP = 4
 
 Deno.serve(async (req) => {
