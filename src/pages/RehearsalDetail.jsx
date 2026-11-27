@@ -6,7 +6,7 @@ import { useAuth } from '../auth'
 import { fmtDate, fmtTime, daysUntil, versionLabel } from '../lib/format'
 import RehearsalForm from './RehearsalForm'
 import CommentComposer from '../components/CommentComposer'
-import TaskItem from '../components/TaskItem'
+import TaskTable from '../components/TaskTable'
 
 // Chi tiet buoi tap: thong tin, bai se tap, link gui Zalo (US-05). Nhan xet: buoc 3.
 export default function RehearsalDetail() {
@@ -107,9 +107,7 @@ export default function RehearsalDetail() {
 
       <h2 className="card-title" style={{ marginTop: 16 }}>{t('task.list_title', { n: tasks.length })}</h2>
       {tasks.length === 0 ? <p className="muted small">{t('task.none')}</p> : (
-        <ul className="task-list">
-          {tasks.map((k) => <TaskItem key={k.id} task={k} members={members} rehearsals={allReh} onChange={loadTasks} />)}
-        </ul>
+        <TaskTable tasks={tasks} members={members} rehearsals={allReh} onChange={loadTasks} />
       )}
     </section>
   )

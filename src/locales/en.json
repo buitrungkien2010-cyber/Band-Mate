@@ -182,7 +182,11 @@
     "st_in_progress": "In progress",
     "st_pending_review": "To check",
     "st_closed": "Closed",
-    "st_cancelled": "Cancelled"
+    "st_cancelled": "Cancelled",
+    "col_song": "Song",
+    "col_pos": "Part",
+    "col_text": "Comment",
+    "col_note": "Notes"
   },
   "pos": {
     "vocal": "Vocal",

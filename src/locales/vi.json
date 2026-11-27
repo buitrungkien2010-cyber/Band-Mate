@@ -182,7 +182,11 @@
     "st_in_progress": "Đang sửa",
     "st_pending_review": "Chờ kiểm tra",
     "st_closed": "Đã đóng",
-    "st_cancelled": "Đã hủy"
+    "st_cancelled": "Đã hủy",
+    "col_song": "Tên bài",
+    "col_pos": "Vị trí",
+    "col_text": "Nhận xét",
+    "col_note": "Ghi chú"
   },
   "pos": {
     "vocal": "Vocal",

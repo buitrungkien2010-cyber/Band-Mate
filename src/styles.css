@@ -213,3 +213,38 @@ input[type=date], input[type=time] { color-scheme: dark; }
 .tb-pending_review { background: var(--accent-soft); color: var(--accent); }
 .tb-closed { background: rgba(79, 209, 165, .14); color: var(--ok); }
 .task select { font-size: 14px; padding: 0 10px; }
+
+/* Bang nhan xet: Ten bai | Vi tri | Nhan xet | Ghi chu */
+.ttable-wrap { background: var(--card); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+.ttable { width: 100%; border-collapse: collapse; font-size: var(--fs-sm); }
+.ttable th { text-align: left; font-size: var(--fs-xs); font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--accent); padding: 10px 12px; border-bottom: 1px solid var(--line-2); background: var(--bg-2); }
+.ttable td { padding: 10px 12px; vertical-align: top; border-top: 1px solid var(--line); line-height: 1.45; }
+.ttable tbody tr:first-child td { border-top-color: var(--line-2); }
+.ttable .c-song { width: 22%; font-weight: 600; }
+.ttable .c-pos { width: 12%; color: var(--ink-2); white-space: nowrap; }
+.ttable .c-text { width: 36%; }
+.ttable .c-note { width: 30%; }
+.ttable tr.st-closed td { opacity: .55; }
+.ttable .g-head { display: none; }
+.tnote { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; }
+.tnote-fields { display: flex; flex-direction: column; gap: 6px; width: 100%; }
+.tnote select { min-height: 38px; font-size: 14px; padding: 0 10px; }
+.tnote-actions { display: flex; flex-wrap: wrap; gap: 6px; }
+.tnote-actions:empty { display: none; }
+.tnote-actions .btn { margin: 0; }
+.tnote-by { font-size: 11px; }
+.task .tnote { margin-top: 4px; }
+
+@media (max-width: 640px) {
+  .ttable thead, .ttable .c-song { display: none; }
+  .ttable .g-head { display: table-row; }
+  .ttable .g-head td { font-weight: 700; color: var(--accent); background: var(--bg-2); padding: 8px 12px; }
+  .ttable tr:not(.g-head) { display: grid; grid-template-columns: 92px 1fr; }
+  .ttable tr:not(.g-head) td { border-top: 0; }
+  .ttable tr:not(.g-head) { border-top: 1px solid var(--line); }
+  .ttable .c-pos, .ttable .c-text { width: auto; padding-bottom: 4px; }
+  .ttable .c-note { grid-column: 1 / -1; width: auto; padding-top: 0; }
+  .ttable .c-pos { font-size: var(--fs-xs); font-weight: 600; color: var(--muted); }
+}
+@media (min-width: 900px) { .content:has(.ttable-wrap) { max-width: 980px; } }
