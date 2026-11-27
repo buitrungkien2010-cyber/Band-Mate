@@ -103,7 +103,8 @@ export function NoteCell({ task, onChange }) {
   const { act, busy } = useTaskAct(task, onChange)
   const [v, setV] = useState(task.note || '')
   useEffect(() => { setV(task.note || '') }, [task.note])
-  const can = (isAdmin || task.assignee_id === member.id) && task.status !== 'cancelled'
+  // Q25: Admin, nguoi nhan, hoac nguoi da ghi nhan xet
+  const can = (isAdmin || task.assignee_id === member.id || task.created_by === member.id) && task.status !== 'cancelled'
   if (!can) return <span className="small">{task.note || ''}</span>
   const save = () => { if ((task.note || '') !== v.trim()) act({ note: v.trim() || null }) }
   return (
