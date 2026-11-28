@@ -142,7 +142,16 @@
     "stats": "{{total}} bài · {{full}} full band",
     "count": "{{n}} bài",
     "empty": "Không có bài nào khớp.",
-    "estimated": "* thời lượng ước tính"
+    "estimated": "* thời lượng ước tính",
+    "back": "Kho bài",
+    "not_found": "Không thấy bài này.",
+    "no_versions": "Bài chưa có version.",
+    "key": "Tone",
+    "chord": "Chord",
+    "lyrics": "Lyrics",
+    "difficulty": "Độ khó",
+    "no_links": "Chưa có link.",
+    "parts": "Phân vai (từ Master file)"
   },
   "reh": {
     "add": "Tạo buổi tập",

@@ -288,3 +288,20 @@ input[type=date], input[type=time] { color-scheme: dark; }
 .zalo-preview pre { white-space: pre-wrap; font: inherit; font-size: var(--fs-sm); line-height: 1.5; margin: 8px 0 0;
   background: var(--bg-2); border-radius: var(--r-sm); padding: 10px 12px; max-height: 320px; overflow: auto; }
 .guide ol { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; font-size: var(--fs-sm); line-height: 1.5; }
+
+/* SL-05 · SCR-07 Chi tiet bai */
+a.song-row { color: inherit; text-decoration: none; }
+a.song-row:active, a.song-row:hover { border-color: var(--line-2); }
+.ver-card .ver-head { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.ver-card h2 { font-size: var(--fs-md, 16px); margin: 0; }
+.ver-facts { margin: 4px 0 12px; }
+.link-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+.btn-link { display: inline-flex; align-items: center; min-height: 40px; padding: 0 14px; border-radius: 10px;
+  background: var(--chip); color: var(--ink); font-weight: 600; text-decoration: none; border: 1px solid var(--line); }
+.btn-link.yt { background: rgba(255, 80, 80, .14); border-color: rgba(255, 80, 80, .35); }
+.btn-link.chord { background: rgba(233, 185, 73, .14); border-color: rgba(233, 185, 73, .4); color: var(--accent); }
+.parts { width: 100%; border-collapse: collapse; font-size: var(--fs-sm, 14px); }
+.parts caption { text-align: left; padding-bottom: 4px; }
+.parts th { text-align: left; font-weight: 500; color: var(--muted); padding: 6px 10px 6px 0; width: 42%; border-top: 1px solid var(--line); }
+.parts td { padding: 6px 0; border-top: 1px solid var(--line); }
+.ver-note { margin: 10px 0 0; color: var(--ink-2); white-space: pre-wrap; }

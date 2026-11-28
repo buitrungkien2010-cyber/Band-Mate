@@ -1,9 +1,10 @@
 import { useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom'
 import { supabase } from '../supabase'
 
 // SCR-06 Kho bai (rut gon, lat 1a): danh sach bai + version (tone), tim theo ten bai / ca si.
-// Nhan, link, chart, chi tiet bai: lat 1b.
+// Bam vao bai -> SCR-07 Chi tiet bai (SL-05).
 
 const fold = (s) => (s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/đ/gi, 'd').toLowerCase()
 const mmss = (sec) => (sec == null ? null : `${Math.floor(sec / 60)}:${String(sec % 60).padStart(2, '0')}`)
@@ -71,7 +72,7 @@ export default function Songs() {
 
       <ul className="song-list">
         {shown.map((s) => (
-          <li key={s.id} className="song-row">
+          <li key={s.id}><Link to={`/songs/${s.id}`} className="song-row">
             <div className="song-main">
               <span className="song-title">{s.title}</span>
               {s.artist && <span className="song-meta">{s.artist}</span>}
@@ -89,7 +90,7 @@ export default function Songs() {
             <span className={`prog ${s.progress == null ? 'pnone' : PROGRESS[s.progress]}`}>
               {s.progress == null ? t('songs.pnone_short') : `${s.progress}%`}
             </span>
-          </li>
+          </Link></li>
         ))}
       </ul>
 

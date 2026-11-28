@@ -142,7 +142,16 @@
     "stats": "{{total}} songs · {{full}} full band",
     "count": "{{n}} songs",
     "empty": "No matching songs.",
-    "estimated": "* estimated duration"
+    "estimated": "* estimated duration",
+    "back": "Songs",
+    "not_found": "Song not found.",
+    "no_versions": "No versions yet.",
+    "key": "Key",
+    "chord": "Chord",
+    "lyrics": "Lyrics",
+    "difficulty": "Difficulty",
+    "no_links": "No links yet.",
+    "parts": "Parts (from Master file)"
   },
   "reh": {
     "add": "New rehearsal",
